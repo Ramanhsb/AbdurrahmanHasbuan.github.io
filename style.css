@@ -10,11 +10,11 @@ body {
 /* Mengatur tampilan teks */
 h1 {
     font-size: 36pt; /* Ukuran font tetap */
-    color: #e04949; /* Warna teks terbaru */
+    color: #EBE8DB; /* Warna teks terbaru */
 }
 
 h2 {
-    color: #cf43ac; /* Warna teks terbaru */
+    color: #D76C82; /* Warna teks terbaru */
 }
 
 h3 {
@@ -33,7 +33,7 @@ p {
     position: absolute;
     top: 10px;
     right: 20px;
-    background-color: #e0c11069;
+    background-color: #B03052;
     padding: 10px;
     border-radius: 5px;
 }
