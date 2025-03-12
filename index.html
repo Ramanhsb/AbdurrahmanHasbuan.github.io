@@ -6,6 +6,9 @@
     <title>Abdurrahman Hasibuan</title>
     <link rel="stylesheet" href="style.css">
     
+    <script>
+        document.write("<p>Script di antara tag head</p>");
+    </script>
 </head>
 <body>
 
@@ -21,19 +24,28 @@
 
     <div class="container">
         <div class="main-content">
-            <h1>Selamat Datang di Website Abdurrahman Hasibuan</h1> 
-            <h2>Mari menjelajahi dunia ilmu pengetahuan.</h2>
+            <h1>Selamat Datang di Website Abdurrahman Hasibuan!</h1> 
+            <h2>Mari menjelajahi dunia ilmu pengetahuan dan kreativitas tanpa batas.</h2>
             <h3>Di sini, saya berbagi pengalaman, wawasan, dan ide-ide menarik untuk menginspirasi.</h3>
             <p>Setiap perjalanan dimulai dengan langkah pertama. Terima kasih telah mengunjungi halaman ini. Selamat menjelajah dan semoga menemukan sesuatu yang bermanfaat!</p>
          <!-- Tambahan teks baru -->
-         <p>Saya percaya bahwa ilmu pengetahuan adalah jendela menuju masa depan yang lebih cerah, dan kreativitas adalah sayap yang membawa kita terbang lebih tinggi.  </p>
+         <p>Saya percaya bahwa ilmu pengetahuan adalah jendela menuju masa depan yang lebih cerah, dan kreativitas adalah sayap yang membawa kita terbang lebih tinggi. 
+             </p>
         </div>
 
     </div>
+    <button class="welcome-button" onclick="showWelcomeMessage()">Klik untuk Selamat Datang</button>
 
     <h3>Halaman lain</h3>
     <a href="https://library.usu.ac.id/" target="_blank" rel="noopener noreferrer">
         Perpustakaan USU - Sumber Ilmu dan Inspirasi
+
+        <script>
+            document.write("<p>wELCOME</p>");
+            function showWelcomeMessage() {
+                alert("Selamat datang di website Bambang Sugiarto!");
+            }
+        </script>
     </a>
 </body>
 </html>
