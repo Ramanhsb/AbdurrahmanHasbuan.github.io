@@ -1,51 +1,279 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdurrahman Hasibuan</title>
-    <link rel="stylesheet" href="style.css">
-    
-    <script>
-        document.write("<p>Selamat datang di web Abdurrahman Hasibuan</p>");
-    </script>
-</head>
-<body>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Homepage | Abdurrahman Hasibuan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
 
-    <!-- Navbar -->
-    <div class="navbar">
-        <a href="#">Beranda</a>
-        <a href="about.html">About Me</a>
-        <a href="contact-us.html">Contact Us</a>
-        <a href="Kontak.html"</a>
-        <a href="blog.html">blog</a>
+      /* Animation for fade-in */
+      .fade-in {
+        opacity: 0;
+        animation: fadeIn 1.5s forwards;
+      }
 
-    </div>
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
 
-    <div class="container">
-        <div class="main-content">
-            <h1>Selamat Datang di Website Abdurrahman Hasibuan!</h1> 
-            <h2>Mari menjelajahi dunia ilmu pengetahuan dan kreativitas tanpa batas.</h2>
-            <h3>Di sini, saya berbagi pengalaman, wawasan, dan ide-ide menarik untuk menginspirasi.</h3>
-            <p>Setiap perjalanan dimulai dengan langkah pertama. Terima kasih telah mengunjungi halaman ini. Selamat menjelajah dan semoga menemukan sesuatu yang bermanfaat!</p>
-         <!-- Tambahan teks baru -->
-         <p>Saya percaya bahwa ilmu pengetahuan adalah jendela menuju masa depan yang lebih cerah, dan kreativitas adalah sayap yang membawa kita terbang lebih tinggi. 
-             </p>
+      /* Animation for sliding */
+      .slide-in {
+        transform: translateX(100%);
+        animation: slideIn 0.5s ease-out forwards;
+      }
+
+      @keyframes slideIn {
+        to {
+          transform: translateX(0);
+        }
+      }
+
+      /* Scroll animation */
+      .scroll-animate {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: scrollAnim 1s ease-out forwards;
+      }
+
+      @keyframes scrollAnim {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300"
+  >
+    <div class="min-h-screen flex flex-col">
+      <!-- Navbar -->
+      <header
+        class="sticky top-0 z-50 bg-white dark:bg-gray-900 shadow-sm border-b dark:border-gray-700"
+      >
+        <div
+          class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center fade-in"
+        >
+          <span class="text-xl font-bold text-indigo-600 dark:text-indigo-400"
+            >📚 Abdurrahman Hasibuan</span
+          >
+          <button
+            id="menu-btn"
+            class="md:hidden text-gray-700 dark:text-gray-200 focus:outline-none"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+          <nav
+            id="nav-links"
+            class="hidden md:flex gap-6 font-medium text-base"
+          >
+            <a
+              href="index.html"
+              class="hover:text-indigo-600 dark:hover:text-indigo-300 transition"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="hover:text-indigo-600 dark:hover:text-indigo-300 transition"
+              >About</a
+            >
+            <a
+              href="Feed-back.html"
+              class="hover:text-indigo-600 dark:hover:text-indigo-300 transition"
+              >FeedBack</a
+            >
+            <a
+              href="contact-us.html"
+              class="hover:text-indigo-600 dark:hover:text-indigo-300 transition"
+              >Contact</a
+            >
+            <a
+              href="Homework.html"
+              class="hover:text-indigo-600 dark:hover:text-indigo-300 transition"
+              >Homework</a
+            >
+          </nav>
         </div>
+        <div
+          id="mobile-nav"
+          class="md:hidden hidden px-6 pb-4 space-y-2 font-medium text-base"
+        >
+          <a
+            href="index.html"
+            class="block hover:text-indigo-600 dark:hover:text-indigo-300"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="block hover:text-indigo-600 dark:hover:text-indigo-300"
+            >About</a
+          >
+          <a
+            href="Feed-back.html"
+            class="block hover:text-indigo-600 dark:hover:text-indigo-300"
+            >FeedBack</a
+          >
+          <a
+            href="contact-us.html"
+            class="block hover:text-indigo-600 dark:hover:text-indigo-300"
+            >Contact</a
+          >
+          <a
+            href="Homework.html"
+            class="block hover:text-indigo-600 dark:hover:text-indigo-300"
+            >Homework</a
+          >
+        </div>
+      </header>
 
+      <!-- Hero Section -->
+      <section
+        class="relative w-full bg-cover bg-center bg-no-repeat py-24 px-6 fade-in"
+        style="
+          background-image: url('https://sahabatsetara.id/wp-content/uploads/2021/11/ylswjsy7stw-1140x445.jpg');
+        "
+      >
+        <!-- Overlay gradient -->
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60 dark:from-gray-900/50 dark:to-gray-900/80 z-0"
+        ></div>
+
+        <!-- Content -->
+        <div class="relative z-10 max-w-4xl mx-auto text-center text-white">
+          <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold drop-shadow-lg">
+            Perpustakaan Abdurrahman Hasibuan
+          </h1>
+          <p class="mt-6 text-lg sm:text-xl drop-shadow-md">
+            Sumber Informasi dan Literasi Terbaik Untuk Anda
+          </p>
+        </div>
+      </section>
+
+      <!-- Main Content -->
+      <main class="flex-grow max-w-7xl mx-auto px-6 py-16">
+        <div class="grid gap-8 sm:grid-cols-2">
+          <!-- Artikel -->
+          <div
+            class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-md hover:shadow-lg transition scroll-animate"
+          >
+            <h3
+              class="text-2xl font-semibold mb-3 text-indigo-700 dark:text-indigo-300"
+            >
+              Artikel Terbaru
+            </h3>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+              Temukan artikel terbaru seputar literasi, teknologi, dan 
+              pendidikan yang dapat memperkaya pengetahuan dan wawasan Anda
+            </p>
+            <a
+              href="https://library.usu.ac.id/"
+              class="inline-block mt-2 text-sm text-indigo-600 dark:text-indigo-400 hover:underline font-semibold"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Lihat Selengkapnya →</a
+            >
+          </div>
+
+          <!-- Rekomendasi Buku -->
+          <div
+            class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-md hover:shadow-lg transition scroll-animate"
+          >
+            <h3
+              class="text-2xl font-semibold mb-3 text-indigo-700 dark:text-indigo-300"
+            >
+              Rekomendasi Buku
+            </h3>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+              Temukan karakter buku yang anda ingin kan di website Abdurrahman Hasibuan
+            </p>
+            <a
+              href="https://library.usu.ac.id/"
+              class="inline-block mt-2 text-sm text-indigo-600 dark:text-indigo-400 hover:underline font-semibold"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Lihat Selengkapnya →</a
+            >
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer
+        class="bg-indigo-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 py-4 mt-auto"
+      >
+        <div
+          class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-xs text-center md:text-left">
+            &copy; 2025 Abdurrahman Hasibuan
+            buku.
+          </p>
+          <div class="flex gap-3 mt-2 md:mt-0 text-xs">
+            <a
+              href="index.html"
+              class="hover:text-indigo-600 dark:hover:text-indigo-400"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="hover:text-indigo-600 dark:hover:text-indigo-400"
+              >About</a
+            >
+            <a
+              href="Feed-back.html"
+              class="hover:text-indigo-600 dark:hover:text-indigo-400"
+              >Feedback</a
+            >
+            <a
+              href="contact-us.html"
+              class="hover:text-indigo-600 dark:hover:text-indigo-400"
+              >Contact</a
+            >
+            <a
+              href="Homework.html"
+              class="hover:text-indigo-600 dark:hover:text-indigo-400"
+              >Homework</a
+            >
+          </div>
+        </div>
+      </footer>
     </div>
-    <button class="welcome-button" onclick="showWelcomeMessage()">Klik untuk Selamat Datang</button>
 
-    <h3>Halaman lain</h3>
-    <a href="https://library.usu.ac.id/" target="_blank" rel="noopener noreferrer">
-        Perpustakaan USU - Sumber Ilmu dan Inspirasi
+    <!-- Theme Toggle & Mobile Menu -->
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileNav = document.getElementById("mobile-nav");
 
-        <script>
-            document.write("<p>WELCOME</p>");
-            function showWelcomeMessage() {
-                alert("Selamat datang di website Abdurrahman Hasibuan!");
-            }
-        </script>
-    </a>
-</body>
+      menuBtn.addEventListener("click", () => {
+        mobileNav.classList.toggle("hidden");
+      });
+    </script>
+  </body>
 </html>
