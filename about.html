@@ -1,76 +1,241 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>About Me</title>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Homepage | Perpustakaan Abdurrahman Hasibuan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        body {
-            text-align: center;
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      /* Animasi Fade In */
+      .fade-in {
+        animation: fadeIn 1s ease-out forwards;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
         }
-        table {
-            margin: 20px auto;
-            border-collapse: collapse;
-            width: 50%;
+
+        100% {
+          opacity: 1;
         }
-        th, td {
-            padding: 10px;
-            border: 1px solid black;
+      }
+
+      /* Animasi slide-up */
+      .slide-up {
+        animation: slideUp 1s ease-out forwards;
+      }
+
+      @keyframes slideUp {
+        0% {
+          transform: translateY(20px);
+          opacity: 0;
         }
-        .navbar {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-            padding: 10px;
+
+        100% {
+          transform: translateY(0);
+          opacity: 1;
         }
-        .navbar a {
-            color: white;
-            padding: 10px 15px;
-            text-decoration: none;
-        }
+      }
+
+      /* Animasi hover untuk tombol */
+      .btn-hover:hover {
+        transform: scale(1.05);
+        transition: all 0.3s ease-in-out;
+      }
     </style>
-</head>
-<body>
-    <div class="navbar">
-        <a href="index.html">Beranda</a>
-        <a href="about.html">About Me</a>
-        <a href="contact-us.html">Contact Us</a>
-        <a href="Kontak.html">Kontak</a>
-        <a href="blog.html">Blog</a>
+  </head>
+
+  <body
+    class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300"
+  >
+    <div class="min-h-screen flex flex-col">
+      <!-- Navbar -->
+      <header
+        class="sticky top-0 z-50 bg-white dark:bg-gray-900 shadow-sm border-b dark:border-gray-700 fade-in"
+      >
+        <div
+          class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
+        >
+          <span class="text-xl font-bold text-indigo-600 dark:text-indigo-400">
+            📚 Abdurrahman Hasibuan Library
+          </span>
+          <button
+            id="menu-btn"
+            class="md:hidden text-gray-700 dark:text-gray-200 focus:outline-none"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+          <nav
+            id="nav-links"
+            class="hidden md:flex gap-6 font-medium text-base"
+          >
+            <a
+              href="index.html"
+              class="hover:text-indigo-600 dark:hover:text-indigo-300 transition"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="hover:text-indigo-600 dark:hover:text-indigo-300 transition"
+              >About</a
+            >
+            <a
+              href="Feed-back.html"
+              class="hover:text-indigo-600 dark:hover:text-indigo-300 transition"
+              >FeedBack</a
+            >
+            <a
+              href="contact-us.html"
+              class="hover:text-indigo-600 dark:hover:text-indigo-300 transition"
+              >Contact</a
+            >
+            <a
+              href="Homework.html"
+              class="hover:text-indigo-600 dark:hover:text-indigo-300 transition"
+              >Homework</a
+            >
+          </nav>
+        </div>
+        <div
+          id="mobile-nav"
+          class="md:hidden hidden px-6 pb-4 space-y-2 font-medium text-base"
+        >
+          <a
+            href="index.html"
+            class="block hover:text-indigo-600 dark:hover:text-indigo-300"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="block hover:text-indigo-600 dark:hover:text-indigo-300"
+            >About</a
+          >
+          <a
+            href="Feed-back.html"
+            class="block hover:text-indigo-600 dark:hover:text-indigo-300"
+            >FeedBack</a
+          >
+          <a
+            href="contact-us.html"
+            class="block hover:text-indigo-600 dark:hover:text-indigo-300"
+            >Contact</a
+          >
+          <a
+            href="Homework.html"
+            class="block hover:text-indigo-600 dark:hover:text-indigo-300"
+            >Homework</a
+          >
+        </div>
+      </header>
+
+      <!-- Hero Section -->
+      <section
+        class="relative w-full bg-cover bg-center bg-no-repeat py-24 px-6 fade-in"
+        style="
+          background-image: url('https://ik.imagekit.io/tvlk/blog/2024/08/shutterstock_258035882.jpg?tr=q-70,c-at_max,w-500,h-250,dpr-2');
+        "
+      >
+        <!-- Overlay gradient -->
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60 dark:from-gray-900/50 dark:to-gray-900/80 z-0"
+        ></div>
+
+        <!-- Content -->
+        <div class="relative z-10 max-w-4xl mx-auto text-center text-white">
+          <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold drop-shadow-lg">
+            About Alfaradhila Library
+          </h1>
+          <p class="mt-6 text-lg sm:text-xl drop-shadow-md">
+            Platform perpustakaan digital modern yang menyediakan akses mudah ke
+            berbagai sumber pengetahuan bagi semua kalangan.
+          </p>
+        </div>
+      </section>
+
+      <!-- Biodata Section -->
+      <main class="max-w-4xl mx-auto px-6 py-10">
+        <p
+          class="text-center text-white mb-10 leading-relaxed text-lg slide-up"
+        >
+          <strong>Abdurrahman Hasibuan Library</strong> adalah perpustakaan digital,
+          sebuah terobosan yang memungkinkan pengguna mengakses beragam koleksi 
+          buku, jurnal, dan referensi ilmiah secara online, tanpa batasan tempat dan waktu.
+          Inovasi ini mendukung proses pembelajaran dan peningkatan literasi yang lebih inklusif dan efisien
+        </p>
+      </main>
+
+      <!-- Footer -->
+      <footer
+        class="bg-indigo-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 py-4 mt-auto fade-in"
+      >
+        <div
+          class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-xs text-center md:text-left">
+            &copy; 2025 Perpustakaan Abdurrahman Hasibuan
+          </p>
+          <div class="flex gap-3 mt-2 md:mt-0 text-xs">
+            <a
+              href="index.html"
+              class="hover:text-indigo-600 dark:hover:text-indigo-400"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="hover:text-indigo-600 dark:hover:text-indigo-400"
+              >About</a
+            >
+            <a
+              href="Feed-back.html"
+              class="hover:text-indigo-600 dark:hover:text-indigo-400"
+              >Feedback</a
+            >
+            <a
+              href="contact-us.html"
+              class="hover:text-indigo-600 dark:hover:text-indigo-400"
+              >Contact</a
+            >
+            <a
+              href="Homework.html"
+              class="hover:text-indigo-600 dark:hover:text-indigo-400"
+              >Homework</a
+            >
+          </div>
+        </div>
+      </footer>
     </div>
-    
-    <h1>About Me</h1>
-    <p>Halaman ini berisi tentang saya</p>
-    
-    <table>
-        <tr>
-            <td><b>Nama</b></td>
-            <td>Abdurrahman Hasibuan</td>
-        </tr>
-        <tr>
-            <td>NIM</td>
-            <td>210709064</td>
-        </tr>
-        <tr>
-            <td>Program Studi</td>
-            <td>Perpustakaan dan Sains Informasi</td>
-        </tr>
-        <tr>
-            <td>Fakultas</td>
-            <td>Ilmu Budaya</td>
-        </tr>
-        <tr>
-            <td>Universitas</td>
-            <td>Universitas Sumatera Utara</td>
-        </tr>
-    </table>
-    
-    <h4>Halaman lain</h4>
-    <ul>
-        <li>
-            <a href="https://library.usu.ac.id/" target="_blank">Perpustakaan USU</a>
-        </li>
-    </ul>
-</body>
+
+    <!-- Script -->
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileNav = document.getElementById("mobile-nav");
+
+      menuBtn.addEventListener("click", () => {
+        mobileNav.classList.toggle("hidden");
+      });
+    </script>
+  </body>
 </html>
